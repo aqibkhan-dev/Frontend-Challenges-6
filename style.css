@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root {
+    --clr-primary--Dark-cyan: hsl(158, 36%, 37%);
+    --clr-primary-Cream: hsl(30, 38%, 92%);
+
+    --clr-neutral-Very-dark-blue: hsl(212, 21%, 14%);
+    --clr-neutral-Dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-neutral-White-: hsl(0, 0%, 100%);
+
+    --ff-headings: "Fraunces", serif;
+    --ff-body: "Montserrat", sans-serif;
+    --fw-500: 500;
+    --fw-700: 700;
+    --fs-heading: 2rem;
+    --fs-body: 0.875rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.1;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-500);
+    color: var(--clr-neutral-Dark-grayish-blue);
+    background: var(--clr-primary-Cream);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: var(--fs-body);
+    font-weight: var(--fw-500);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.sub-title, .amount {
+    font-family: var(--ff-headings);
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-700);
+}
+
+.sub-title {
+    color: var(--clr-neutral-Very-dark-blue);
+}
+
+.amount {
+    color: var(--clr-primary--Dark-cyan);
+}
+
+.pre-amount {
+    text-decoration: line-through;
+    margin: 0 !important;
+}
+
+.purchase-btn {
+    justify-content: center;
+    width: 100%;
+    gap: .5rem;
+    border-radius: .4rem;
+    color: var(--clr-neutral-White-);
+    padding: .9rem;
+    border: none;
+    background: var(--clr-primary--Dark-cyan);
+}
+
+.pricing {
+    gap: 1.3rem;
+}
+
+.container {
+    justify-content: center;
+    margin-top: 9rem;
+}
+
+.card-container {
+    width: 43em;
+    background: var(--clr-neutral-White-);
+    border-radius: .6rem;
+}
+
+.card-container>* {
+    flex-basis: 100%;
+}
+
+.mobile-img {
+    display: none;
+}
+
+.Parfum-img {
+    border-top-left-radius: .6rem;
+    border-bottom-left-radius: .6rem;
+}
+
+.card-discription {
+    padding: 1.9rem;
+}
+
+.card-discription * + * {
+    margin-top: 1.3rem;
+}
+
+@media screen and (max-width: 575px) {
+    .Parfum-img {
+        display: none;
+    }
+    .mobile-img {
+        display: block;
+        border-radius: 0;
+        border-top-left-radius: .6rem;
+        border-top-right-radius: .6rem;
+    }
+    .container {
+        padding: 1.5rem;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+}
